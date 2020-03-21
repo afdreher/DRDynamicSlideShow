@@ -235,6 +235,17 @@ typedef NS_ENUM(NSUInteger, DRDynamicSlideShowAnimationValueType) {
     }
 }
 
+- (void)scrollToPreviousPage {
+    [self resetCurrentAnimations];
+    [self performCurrentAnimationsWithPercentage:0];
+
+    if (currentPage > 0) {
+        [UIView animateWithDuration:0.425 animations:^{
+            [self setContentOffset:CGPointMake(self.contentOffset.x-self.frame.size.width, self.contentOffset.y)];
+        }];
+    }
+}
+
 - (void)addAnimation:(DRDynamicSlideShowAnimation *)animation {
     [animations addObject:animation];
 }

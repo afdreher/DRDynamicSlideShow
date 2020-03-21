@@ -40,6 +40,10 @@
 - (void)addAnimation:(DRDynamicSlideShowAnimation *)animation;
 - (void)addSubview:(UIView *)subview onPage:(NSInteger)page;
 
+// Legacy
+- (void)scrollToNextPage;
+- (void)scrollToPreviousPage;
+
 // @property (nonatomic) DRDynamicSlideShowDirection direction;
 // - (id)initWithOrientation:(DRDynamicSlideShowDirection)direction;
 
