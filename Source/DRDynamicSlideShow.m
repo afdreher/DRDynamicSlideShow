@@ -22,6 +22,7 @@ typedef NS_ENUM(NSUInteger, DRDynamicSlideShowAnimationValueType) {
 @interface DRDynamicSlideShow ()
 
 @property (readwrite, nonatomic) NSInteger numberOfPages;
+@property (readonly, nonatomic) NSInteger currentPage;
 
 @end
 
@@ -96,7 +97,7 @@ typedef NS_ENUM(NSUInteger, DRDynamicSlideShowAnimationValueType) {
     NSValue *toValue = self.toValue;
     percentage = MAX((percentage-self.delay)/(1-self.delay), 0);
     if ([self.toValue isKindOfClass:[NSArray class]]) {
-        int numberOfToValues = [self.toValue count];
+        NSUInteger numberOfToValues = [self.toValue count];
         CGFloat divided = (CGFloat)1 / numberOfToValues;
         int index = MIN(percentage / divided, numberOfToValues - 1);
         percentage = ((CGFloat) percentage / divided) - index;
