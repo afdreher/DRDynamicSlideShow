@@ -35,6 +35,7 @@
 @property (nonatomic) BOOL scrollsPageOnTap;
 @property (strong, nonatomic) void (^didReachPageBlock)(NSInteger page);
 @property (strong, nonatomic) void (^didScrollBlock)(CGPoint contentOffset);
+@property (readonly, nonatomic) NSInteger currentPage;
 
 - (void)addAnimation:(DRDynamicSlideShowAnimation *)animation;
 - (void)addSubview:(UIView *)subview onPage:(NSInteger)page;

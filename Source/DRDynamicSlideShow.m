@@ -22,7 +22,6 @@ typedef NS_ENUM(NSUInteger, DRDynamicSlideShowAnimationValueType) {
 @interface DRDynamicSlideShow ()
 
 @property (readwrite, nonatomic) NSInteger numberOfPages;
-@property (readonly, nonatomic) NSInteger currentPage;
 
 @end
 
